@@ -6,11 +6,11 @@ export default function Hero() {
           THE
         </div>
 
-        <div className="mx-auto w-full max-w-[980px] overflow-hidden bg-[#e8e2db]">
+        <div className="mx-auto aspect-[4/3] w-full max-w-[980px] overflow-hidden bg-[#e8e2db]">
           <img
             src="/hero.jpg"
             alt="Black and white portrait of the couple walking together"
-            className="block h-[420px] w-full scale-[1.6] object-cover object-[center_15%] grayscale contrast-125 sm:h-[520px] lg:h-[560px] lg:scale-[1.75]"
+            className="block h-full w-full object-cover object-top grayscale contrast-125"
           />
         </div>
 

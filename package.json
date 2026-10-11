@@ -1,17 +1,25 @@
 {
   "name": "bet-and-basleal",
   "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": "20.x"
+  },
+  "packageManager": "npm@10.9.2",
   "workspaces": [
     "apps/web",
     "apps/api"
   ],
   "scripts": {
-    "dev": "concurrently -n web,api -c green,blue \"npm:dev:web\" \"npm:dev:api\"",
+    "dev": "npm run dev --workspace @basleal/web",
     "dev:web": "npm run dev --workspace @basleal/web",
     "dev:api": "npm run dev --workspace @basleal/api",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build --workspace @basleal/web",
+    "build:web": "npm run build --workspace @basleal/web",
+    "start": "npm run start --workspace @basleal/web",
     "start:web": "npm run start --workspace @basleal/web",
-    "start:api": "npm run start --workspace @basleal/api"
+    "start:api": "npm run start --workspace @basleal/api",
+    "dev:all": "concurrently -n web,api -c green,blue \"npm:dev:web\" \"npm:dev:api\""
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
